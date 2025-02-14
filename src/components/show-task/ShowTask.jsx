@@ -13,7 +13,7 @@ function ShowTask() {
 
   async function getAllTasks() {
     try {
-      const { data } = await axios.get("http://localhost:3001/task/getAllTasks")
+      const { data } = await axios.get("https://task-backend-73ji.vercel.app/task/getAllTasks")
       console.log(data)
       setIsLoading(false)
       setAllTasks(data.allTasks)
@@ -24,7 +24,7 @@ function ShowTask() {
 
   async function deleteTask(taskId) {
     try {
-      const res = await axios.delete(`http://localhost:3001/task/delete/${taskId}`)
+      const res = await axios.delete(`https://task-backend-73ji.vercel.app/task/delete/${taskId}`)
       getAllTasks()
     } catch (err) {
       console.log(err, "error")
@@ -34,7 +34,7 @@ function ShowTask() {
 
   async function updateTask(taskId) {
     try {
-      const res = await axios.put(`http://localhost:3001/task/update/${taskId}`)
+      const res = await axios.put(`https://task-backend-73ji.vercel.app/task/update/${taskId}`)
       getAllTasks()
     } catch (err) {
       console.log(err, "error")

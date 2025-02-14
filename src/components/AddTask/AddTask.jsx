@@ -35,7 +35,7 @@ const AddTask = () => {
 
   async function onSubmit(values) {
     try{
-      const {data}= await axios.post("http://localhost:3001/task/add",values)
+      const {data}= await axios.post("https://task-backend-73ji.vercel.app/task/add",values)
       console.log(data)
       showSuccessAlert()
     }catch(err){
